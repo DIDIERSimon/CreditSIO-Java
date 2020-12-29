@@ -76,4 +76,7 @@ public class CompteEpargne extends Compte{
         return titulaire;
     }
 
+    public String getNumeroClient(){
+        return titulaire.getNumeroCLI();
+    }
 }
