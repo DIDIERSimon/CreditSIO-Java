@@ -2,10 +2,6 @@ package CreditSIO.Controller;
 
 import CreditSIO.metier.*;
 import CreditSIO.modele.*;
-import com.sun.javafx.scene.control.TableColumnComparatorBase;
-import javafx.beans.Observable;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -68,7 +64,7 @@ public class controller implements Initializable {
 
     public void comptesCourant(ActionEvent actionEvent) throws IOException {
         String login = infoForm.userLogin;
-        Parent root = FXMLLoader.load(getClass().getResource("../vue/vueComptesByClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../vue/vueComptesCourantByClient.fxml"));
 
         Stage stage = new Stage();
         Scene scene = new Scene(root);
@@ -79,7 +75,7 @@ public class controller implements Initializable {
 
     public void comptesEpargne(ActionEvent actionEvent) throws IOException {
         String login = infoForm.userLogin;
-        Parent root = FXMLLoader.load(getClass().getResource("../vue/vueComptesByClient.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../vue/vueComptesEpargneByClient.fxml"));
 
         Stage stage = new Stage();
         Scene scene = new Scene(root);
