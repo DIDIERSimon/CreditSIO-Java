@@ -83,5 +83,19 @@ public class controller implements Initializable {
         stage.setTitle(login + " - Liste des comptes épargnes");
         stage.show();
     }
+
+    @FXML
+    public void showAdmClient(ActionEvent actionEvent) throws IOException {
+
+        String login = infoForm.userLogin;
+        Parent root = FXMLLoader.load(getClass().getResource("../vue/AdministrationClient.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle(login + " Administration des clients");
+        stage.show();
+
+    }
 }
 
