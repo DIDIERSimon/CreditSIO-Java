@@ -62,7 +62,7 @@ public class AdmClientController implements Initializable {
     }
 
     public void deleteClient(ActionEvent actionEvent) {
-        
+
     }
 
     public void addClient(ActionEvent actionEvent) {
