@@ -46,7 +46,6 @@ public class CompteCController implements Initializable {
                         double decouvMax = courant.getDecouvertAutorise();
                         tableView.add(new CompteCourant(current, titulaire, solde, decouvMax));
                 }
-
             }
         }
 
