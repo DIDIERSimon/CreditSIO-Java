@@ -97,5 +97,17 @@ public class controller implements Initializable {
         stage.show();
 
     }
+
+    public void showAccount(ActionEvent actionEvent) throws IOException {
+
+        String login = infoForm.userLogin;
+        Parent root = FXMLLoader.load(getClass().getResource("../vue/AdministrationCompte.fxml"));
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle(login + " Administration des comptes.");
+        stage.show();
+    }
 }
 

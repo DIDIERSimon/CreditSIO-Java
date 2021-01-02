@@ -4,6 +4,7 @@ import CreditSIO.metier.Client;
 import java.sql.*;
 import java.util.ArrayList;
 
+
 /**
  * Classe ClientDAO.
  * Classe d'accès aux données de la table client.
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class ClientDAO implements IDao {
     private Connection myConnection;
     private Statement stmt = null;
+    private CallableStatement cStmt = null;
     private ResultSet rs = null;
     private ArrayList<Client> clients = null;
 
@@ -69,8 +71,14 @@ public class ClientDAO implements IDao {
     }
 
     @Override
-    public int delete(String req) {
-        return 0;
+    public void delete(String numeroClient) {
+        try{
+            cStmt = myConnection.prepareCall("{call supprimerClient(?)}");
+            cStmt.setString(1, numeroClient);
+            cStmt.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 
     /**

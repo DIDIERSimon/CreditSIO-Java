@@ -45,8 +45,8 @@ public class UsersDAO implements IDao{
     }
 
     @Override
-    public int delete(String req) {
-        return 0;
+    public void delete(String req) {
+
     }
 
     public ArrayList<Users> findAll(){ return users; }

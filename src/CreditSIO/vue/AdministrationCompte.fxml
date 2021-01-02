@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="608.0" prefWidth="1092.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreditSIO.Controller.AdmCompteController">
+   <children>
+      <TableView fx:id="vueComptes" layoutX="30.0" layoutY="58.0" prefHeight="493.0" prefWidth="331.0">
+        <columns>
+          <TableColumn fx:id="CompteNum" prefWidth="88.0" text="N° Compte" />
+          <TableColumn fx:id="CompteSolde" prefWidth="126.0" text="Solde du compte" />
+            <TableColumn fx:id="ClientNumero" prefWidth="116.0" text="Appartenant à" />
+        </columns>
+      </TableView>
+      <Label layoutX="469.0" layoutY="106.0" prefHeight="17.0" prefWidth="108.0" text="Numéro du compte" />
+      <Label layoutX="477.0" layoutY="196.0" prefHeight="17.0" prefWidth="108.0" text="Solde du Compte" />
+      <Label layoutX="477.0" layoutY="296.0" prefHeight="17.0" prefWidth="139.0" text="Appartenance du compte" />
+      <TextField fx:id="NumAcc" layoutX="657.0" layoutY="102.0" />
+      <TextField fx:id="SoldeAcc" layoutX="657.0" layoutY="192.0" />
+      <TextField fx:id="ClientNum" layoutX="657.0" layoutY="292.0" />
+      <Button layoutX="884.0" layoutY="252.0" mnemonicParsing="false" onAction="#CreateAcc" prefHeight="25.0" prefWidth="132.0" text="Creer un compte" />
+      <CheckBox layoutX="884.0" layoutY="115.0" mnemonicParsing="false" text="Type épargne" />
+      <CheckBox layoutX="885.0" layoutY="159.0" mnemonicParsing="false" text="Type Courant" />
+      <Button layoutX="863.0" layoutY="292.0" mnemonicParsing="false" onAction="#DeleteAcc" prefHeight="25.0" prefWidth="184.0" text="Supprimer un compte" />
+      <Button layoutX="443.0" layoutY="411.0" mnemonicParsing="false" onAction="#AddSoldeAcc" prefHeight="61.0" prefWidth="214.0" text="Ajouter des fonds sur le compte" />
+      <Button layoutX="717.0" layoutY="411.0" mnemonicParsing="false" onAction="#RemoveSoldeAcc" prefHeight="61.0" prefWidth="214.0" text="Retirer des fonds sur le compte" />
+      <TextField fx:id="ModifSolde" layoutX="597.0" layoutY="505.0" />
+      <Label layoutX="443.0" layoutY="509.0" prefHeight="17.0" prefWidth="114.0" text="Modificateur solde" />
+   </children>
+</AnchorPane>

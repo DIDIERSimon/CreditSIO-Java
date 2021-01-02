@@ -9,7 +9,7 @@
    <children>
       <Button layoutX="57.0" layoutY="105.0" mnemonicParsing="false" onAction="#comptesCourant" prefHeight="43.0" prefWidth="153.0" text="Compte Courant Client" />
       <Button layoutX="57.0" layoutY="178.0" mnemonicParsing="false" onAction="#comptesEpargne" prefHeight="43.0" prefWidth="153.0" text="Compte Epargne Client" />
-      <Button layoutX="57.0" layoutY="250.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="153.0" text="Administrer les Comptes" />
+      <Button layoutX="57.0" layoutY="250.0" mnemonicParsing="false" onAction="#showAccount" prefHeight="43.0" prefWidth="153.0" text="Administrer les Comptes" />
       <Button layoutX="57.0" layoutY="323.0" mnemonicParsing="false" onAction="#showAdmClient" prefHeight="43.0" prefWidth="153.0" text="Administrer les Clients" />
       <Label layoutX="376.0" layoutY="148.0" text="CreditSIO">
          <font>

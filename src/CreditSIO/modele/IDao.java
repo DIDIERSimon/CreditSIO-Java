@@ -33,5 +33,5 @@ public interface IDao {
      * D du crud.
      */
 
-    int delete(String req);
+    void delete(String req);
 }

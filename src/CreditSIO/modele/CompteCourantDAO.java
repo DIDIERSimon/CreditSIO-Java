@@ -72,8 +72,8 @@ public class CompteCourantDAO implements IDao {
     }
 
     @Override
-    public int delete(String req) {
-        return 0;
+    public void delete(String req) {
+
     }
 
     /**
