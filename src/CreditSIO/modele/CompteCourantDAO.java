@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * modified on 18/12/2020.
  * @see CreditSIO.metier.CompteCourant
  */
-public class CompteCourantDAO implements IDao {
+public class CompteCourantDAO implements IDao<CompteCourant> {
     private Connection myConnection;
     private Statement stmt = null;
     private ResultSet rs = null;
@@ -40,7 +40,7 @@ public class CompteCourantDAO implements IDao {
      */
 
     @Override
-    public int create(String req) {
+    public int create(CompteCourant cc) {
         return 0;
     }
 

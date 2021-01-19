@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane fx:id="id" prefHeight="684.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CreditSIO.vue.AdministrationUsers">
+   <children>
+      <TableView fx:id="users" layoutX="17.0" layoutY="81.0" prefHeight="491.0" prefWidth="483.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="57.0" text="id" />
+          <TableColumn fx:id="login" prefWidth="125.0" text="Login" />
+            <TableColumn fx:id="type" prefWidth="66.0" text="Type" />
+            <TableColumn fx:id="psw" prefWidth="138.0" text="Password" />
+            <TableColumn fx:id="clientnum" prefWidth="96.0" text="ClientNum" />
+        </columns>
+      </TableView>
+      <TextField layoutX="618.0" layoutY="149.0" prefHeight="25.0" prefWidth="179.0" />
+      <TextField layoutX="618.0" layoutY="198.0" prefHeight="25.0" prefWidth="179.0" />
+      <TextField layoutX="618.0" layoutY="259.0" prefHeight="25.0" prefWidth="179.0" />
+      <TextField layoutX="618.0" layoutY="318.0" prefHeight="25.0" prefWidth="179.0" />
+      <Label layoutX="516.0" layoutY="198.0" text="Type" />
+      <Label layoutX="516.0" layoutY="259.0" text="Mot de Passe" />
+      <Label layoutX="516.0" layoutY="318.0" text="Numero Client" />
+      <Label layoutX="516.0" layoutY="149.0" text="Login" />
+   </children>
+</AnchorPane>

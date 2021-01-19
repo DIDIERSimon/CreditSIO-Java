@@ -7,13 +7,13 @@ import java.util.ArrayList;
  * Gestion du CRUD.
  * implémentée par ClientDAO, CompteCourantDAO, CompteEpargneDAO.
  */
-public interface IDao {
+public interface IDao<T> {
     /**
      * Create : C du crud.
      * Insère une ligne dans la table.
      */
 
-    int create(String req);
+    int create(T t);
 
     /**
      * Read : R du crud.

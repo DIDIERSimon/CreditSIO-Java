@@ -18,9 +18,9 @@
       <Label layoutX="340.0" layoutY="327.0" prefHeight="17.0" prefWidth="100.0" text="Ville" />
       <Label layoutX="340.0" layoutY="382.0" prefHeight="17.0" prefWidth="100.0" text="Téléphone" />
       <Label layoutX="340.0" layoutY="450.0" prefHeight="17.0" prefWidth="100.0" text="Email" />
-      <TextField fx:id="ClientNom" layoutX="459.0" layoutY="121.0" prefHeight="25.0" prefWidth="185.0" />
+      <TextField fx:id="clientNom" layoutX="459.0" layoutY="121.0" prefHeight="25.0" prefWidth="185.0" />
       <TextField fx:id="clientPrenom" layoutX="459.0" layoutY="169.0" prefHeight="25.0" prefWidth="185.0" />
-      <TextField fx:id="ClientRue" layoutX="459.0" layoutY="221.0" prefHeight="25.0" prefWidth="185.0" />
+      <TextField fx:id="clientRue" layoutX="459.0" layoutY="221.0" prefHeight="25.0" prefWidth="185.0" />
       <TextField fx:id="clientCP" layoutX="459.0" layoutY="269.0" prefHeight="25.0" prefWidth="185.0" />
       <TextField fx:id="clientVille" layoutX="459.0" layoutY="323.0" prefHeight="25.0" prefWidth="185.0" />
       <TextField fx:id="clientTel" layoutX="459.0" layoutY="378.0" prefHeight="25.0" prefWidth="185.0" />

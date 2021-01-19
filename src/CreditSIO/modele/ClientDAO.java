@@ -17,10 +17,11 @@ import java.util.ArrayList;
  * @see CreditSIO.metier.Client
  */
 
-public class ClientDAO implements IDao {
+public class ClientDAO implements IDao<Client> {
     private Connection myConnection;
     private Statement stmt = null;
     private CallableStatement cStmt = null;
+    private PreparedStatement pStmt = null;
     private ResultSet rs = null;
     private ArrayList<Client> clients = null;
 
@@ -34,13 +35,23 @@ public class ClientDAO implements IDao {
         read("select * from client");
     }
 
-    /**
-     * Effectue un insert into client.
-     * @param req : la requete SQL (insert into).
-     * @return : le nombre de lignes affectées dans la table.
-     */
     @Override
-    public int create(String req) {
+    public int create(Client client) {
+        try{
+            pStmt = myConnection.prepareStatement("INSERT INTO CLIENT VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+            pStmt.setString(1, client.getNumeroCLI());
+            pStmt.setString(2, client.getNom());
+            pStmt.setString(3, client.getPrenom());
+            pStmt.setString(4, client.getRue());
+            pStmt.setString(5, client.getCp());
+            pStmt.setString(6, client.getVille());
+            pStmt.setString(7, client.getMobile());
+            pStmt.setString(8, client.getEmail());
+            pStmt.execute();
+            return 1;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return 0;
     }
 
@@ -58,7 +69,6 @@ public class ClientDAO implements IDao {
             while(rs.next()){
                 clients.add(new Client(rs.getString(1), rs.getString(2),rs.getString(3),rs.getString(4),
                         rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8)));
-                myConnection.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();

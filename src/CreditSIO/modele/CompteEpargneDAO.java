@@ -18,7 +18,7 @@ import java.util.ArrayList;
  * @see CreditSIO.metier.CompteEpargne
  */
 
-public class CompteEpargneDAO implements IDao{
+public class CompteEpargneDAO implements IDao<CompteEpargne> {
     private Connection myConnection;
     private Statement stmt = null;
     private ResultSet rs = null;
@@ -44,7 +44,7 @@ public class CompteEpargneDAO implements IDao{
      */
 
     @Override
-    public int create(String req) {
+    public int create(CompteEpargne ce) {
         return 0;
     }
 

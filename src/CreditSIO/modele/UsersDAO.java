@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-public class UsersDAO implements IDao{
+public class UsersDAO implements IDao<Users>{
 
     private Connection myConnection;
     private Statement stmt = null;
@@ -21,7 +21,7 @@ public class UsersDAO implements IDao{
     }
 
     @Override
-    public int create(String req) {
+    public int create(Users usr) {
         return 0;
     }
 

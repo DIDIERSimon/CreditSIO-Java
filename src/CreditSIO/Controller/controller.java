@@ -109,5 +109,12 @@ public class controller implements Initializable {
         stage.setTitle(login + " Administration des comptes.");
         stage.show();
     }
+
+    public void admUsers(ActionEvent actionEvent) {
+
+       /* String login = infoForm.userLogin;
+        Parent root = FXMLLoader.loader(getClass().getResource("../vue/AdministrationUsers.fxml"));*/
+
+    }
 }
 

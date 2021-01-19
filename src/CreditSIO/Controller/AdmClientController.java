@@ -2,6 +2,7 @@ package CreditSIO.Controller;
 
 import CreditSIO.metier.Client;
 import CreditSIO.modele.ClientDAO;
+import CreditSIO.modele.UsersDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,9 +19,10 @@ import java.util.ResourceBundle;
 
 public class AdmClientController implements Initializable {
 
-    @FXML public TextField ClientNom;
+    @FXML public TextField clientNum;
+    @FXML public TextField clientNom;
     @FXML public TextField clientPrenom;
-    @FXML public TextField ClientRue;
+    @FXML public TextField clientRue;
     @FXML public TextField clientCP;
     @FXML public TextField clientVille;
     @FXML public TextField clientTel;
@@ -28,6 +30,7 @@ public class AdmClientController implements Initializable {
     @FXML public TableView<Client> vueClient;
     @FXML public TableColumn<Client, String> client;
     @FXML public TableColumn<Client, String> prenomClient;
+
 
     public ObservableList<Client> getList(){
 
@@ -62,10 +65,14 @@ public class AdmClientController implements Initializable {
     }
 
     public void deleteClient(ActionEvent actionEvent) {
-
+        ClientDAO cliDAO = new ClientDAO();
+        cliDAO.delete(clientNum.getText());
     }
 
     public void addClient(ActionEvent actionEvent) {
-
+        Client client = new Client(clientNum.getText(), clientNom.getText(), clientPrenom.getText(), clientRue.getText(),
+                clientCP.getText(), clientVille.getText(), clientTel.getText(), clientMail.getText());
+        ClientDAO cliDAO = new ClientDAO();
+        cliDAO.create(client);
     }
 }
