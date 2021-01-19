@@ -29,8 +29,8 @@ public class CompteCourantDAO implements IDao {
     public CompteCourantDAO() {
         myConnection = Connexion.getMyConnection();
         read("select * from comptecourant cc " +
-                "join compte c on cc.numcompte=c.numcompte " +
-                "join client ct on c.clientnum=ct.clientnum");
+                "join compte c on cc.comptenum=c.comptenum " +
+                "join client ct on c.titulaire_clientnum=ct.clientnum");
     }
 
     /**
